@@ -30,7 +30,7 @@ jobs:
       # 4. Ejecutar colecciÃ³n con reportes
       - name: Run Postman collection
         run: |
-          newman run '..\..\Suite de Pruebas Demo API.postman_collection.json'  -e '..\..\DemoApi  Enviromen.postman_environment.json' -r htmlextra --reporter-htmlextra-export reporte.html
+          newman run '..\..\..\Suite de Pruebas Demo API.postman_collection.json'  -e '..\..\..\DemoApi  Enviromen.postman_environment.json' -r htmlextra --reporter-htmlextra-export reporte.html
 
       # 5. Guardar reporte como artefacto de GitHub
       - name: Upload HTML report
