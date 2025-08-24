@@ -50,8 +50,6 @@ Creación de una Colección de Pruebas:
     Automatización con Newman:
 Exporta la colección y el entorno de Postman. Luego utiliza Newman para ejecutar la suite de pruebas desde la línea de comandos, integrando la ejecución en un flujo automatizado que simule un proceso de integración continua.
 
-
-
 ### Instrucciones 
 1. Instalar newman y newman-reporter
     ````cmd
@@ -61,15 +59,13 @@ Exporta la colección y el entorno de Postman. Luego utiliza Newman para ejecuta
     ````
 2. Ejecutar coleccion y generar reporte
     ```cmd
-    newman run '.\Suite de Pruebas Demo API.postman_collection.json'  -e '.\DemoApi  Enviromen.postman_environment.json' -r htmlextra --reporter-htmlextra-export reporte.html 
+    newman run '.\SuitePruebas.json'  -e '.\DemoAPI.json' -r htmlextra --reporter-htmlextra-export reporte.html 
     ```
 3. Iniciar reporte html
     ````cmd
     start .\reporte.html 
-    ````
-
 
 4. Ejecucion de newman solamente con reporte por consola
     ````cmd
-    newman run '.\Suite de Pruebas Demo API.postman_collection.json' -e '.\DemoApi  Enviromen.postman_environment.json'
+    newman run '.\SuitePruebas.json' -e 'DemoAPI.json'
     ````
